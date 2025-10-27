@@ -1,0 +1,56 @@
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/HWADBAWDKJWGEHRAKHRBAMSDNASDJK/Tuff/refs/heads/main/Orion.lua'))()
+local Win = OrionLib:MakeWindow({
+    IntroText = "free emergencyhamburg scripts",
+    SaveConfig = true,
+    Name = "free!"
+})
+
+-- Nur Scripts Tab
+local ScriptsTab = Win:MakeTab({
+    Name = "Scripts",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Buttons im Scripts Tab
+ScriptsTab:AddButton({
+    Name = "beanz hub",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Beanz Hub",
+            Content = "Beanz Hub wird geladen...",
+            Image = "rbxassetid://4483345998",
+            Time = 3
+        })
+        loadstring(game:HttpGet("https://beanzz.wtf/Main.lua"))()
+    end
+})
+
+ScriptsTab:AddButton({
+    Name = "atlas hub",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Atlas Hub",
+            Content = "Atlas Hub wird geladen...",
+            Image = "rbxassetid://4483345998",
+            Time = 3
+        })
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/not4tlas/atlas/refs/heads/main/Main.lua"))()
+    end
+})
+
+ScriptsTab:AddButton({
+    Name = "nova",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Nova",
+            Content = "Nova wird geladen...",
+            Image = "rbxassetid://4483345998",
+            Time = 3
+        })
+        loadstring(game:HttpGet("http://novaw.xyz/MainScript.lua"))()
+    end
+})
+
+-- Initialize the UI
+OrionLib:Init()
